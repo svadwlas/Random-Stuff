@@ -1,0 +1,139 @@
+/*
+
+Taking this forward with interafces.
+
+
+*/
+
+public interface IQueryHandler<TQuery, TResult>
+{
+	
+	TResult Handle(TQuery query);
+	
+}
+
+
+public interafce ICommandHandler<TCommand>
+{
+	void Handle(TCommand command);
+}
+
+
+// The DocumentSource class could look like this:
+
+
+public class DocumentSource : IQueryHandler<GetDocumentsQuery, GetDocumentsResult>
+{
+	
+	public GetDocumentsResult Handle(GetDocumentsQuery query){
+		
+		using(var context = CreateEFContext()){
+			
+			return
+			new GetDocumentsResult(
+			
+			context.Documents.Where(c => c.Name.EndsWith("." + query.Format)).ToArray();
+			
+			);
+			
+			
+		}
+	}
+	
+	
+	public class LoggingAwareQueryHandler<TQuery, TResult> : IQueryHandler<TQuery, TResult>
+	{
+		
+		private readonly IQueryHandler <TQuery, TResult> decoratedHandler;
+		
+		public TResult Handle(TQuery query){
+			try{
+				
+				var result = decoratedHandler.Handle(query);
+				logger.LogSuccess();
+				return result;
+				
+			}
+			
+			catch(Exception ex){
+				
+				logger.LogError(..., ex);
+				throw;
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
