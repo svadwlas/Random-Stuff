@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  ScientificViewCalculator.cpp
+  InputFormulaCheck.cpp
+c:\users\shatrugna.vadwlas\documents\visual studio 2017\projects\scientificviewcalculator\scientificviewcalculator\inputformulacheck.cpp(6): error C2011: 'InputFormulaCheck': 'class' type redefinition
+  c:\users\shatrugna.vadwlas\documents\visual studio 2017\projects\scientificviewcalculator\scientificviewcalculator\inputformulacheck.h(3): note: see declaration of 'InputFormulaCheck'
+c:\users\shatrugna.vadwlas\documents\visual studio 2017\projects\scientificviewcalculator\scientificviewcalculator\inputformulacheck.cpp(14): fatal error C1004: unexpected end-of-file found
+  DataType.cpp
+c:\users\shatrugna.vadwlas\documents\visual studio 2017\projects\scientificviewcalculator\scientificviewcalculator\datatype.cpp(10): error C2011: 'DataType': 'class' type redefinition
+  c:\users\shatrugna.vadwlas\documents\visual studio 2017\projects\scientificviewcalculator\scientificviewcalculator\datatype.h(3): note: see declaration of 'DataType'
+  Generating Code...
