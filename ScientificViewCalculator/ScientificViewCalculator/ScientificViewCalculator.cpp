@@ -2,10 +2,26 @@
 //
 
 #include "stdafx.h"
+#include "Calculator.h"
+
+using namespace std;
 
 
-int main()
+void main()
 {
-    return 0;
+    Calculator Calc1;
+    string form;
+    char var;
+    double value;
+    
+    while(true){
+        cout<< "Please, enter your formula:"; cin>>form;
+        cout<< "enter your variable:"; cin>>var;
+        cout<<"Enter " <<var<<" value:"; cin >> value;
+        cout<< "result = "<<c1.calc(form, var, value)<<endl;
+        getche();
+        system("cls");        
+        
+    }
 }
 
